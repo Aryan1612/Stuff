@@ -1,4 +1,5 @@
 //BINGO PROBLEM ADVANCED............
+// here I am trying to know if a randomly generated matrix for bingo has higher chances of winning than an orderly generated matrix
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
