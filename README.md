@@ -15,4 +15,4 @@ library. I also identified the varioous hyperparameters involved in the model an
 
 I compared my model's accuracy with the Sci-kit Learn model's accuracy too.
 
-The Dataset used for this exercise has also been provided in the Dataset folder.
+The Dataset used for training and prediction are present under the headings ds1_train, ds1_predict, ds2_train and ds2_predict respectively.
