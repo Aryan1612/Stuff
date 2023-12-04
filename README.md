@@ -10,4 +10,9 @@ I further tried to test if an ordered bingo sequence has more chances of winning
 
 ### Machine Learning
 
-The K_Means_Clustering and Naive Bayes
+The K_Means_Clustering, Naive Bayes and Logistic Regression are the machine learning models which I implemented from scratch with complete logic without the use of Sci-Kit learn's
+library. I also identified the varioous hyperparameters involved in the model and then fine tuned them to obtain the best accuracy.
+
+I compared my model's accuracy with the Sci-kit Learn model's accuracy too.
+
+The Dataset used for this exercise has also been provided in the Dataset folder.
