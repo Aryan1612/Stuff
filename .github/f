@@ -1,0 +1,11 @@
+syms x;
+f = -3*x^3;  
+m=input('enter domain end point');
+result = f;
+i=polynomialDegree(f, x)-1 ;
+for j = 0:i
+    fprintf("%d(x-2)^%d + ",subs(result,x,2)/factorial(j),j)
+    result = diff(result, x);
+end
+a=-(subs(result,x,2)*factorial(2))/(factorial(3)*(m-2));
+ fprintf("%d(x-2)^%d",a,3)
