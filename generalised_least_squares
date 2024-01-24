@@ -26,7 +26,7 @@ A = zeros(degree+1, degree+1);
 
 for i = 1:degree+1 
     for j = i:i+degree
-        A(i, j-i+1) =  xn(j)
+        A(i, j-i+1) =  xn(j);
     end
 end
 B = xny'
@@ -39,4 +39,23 @@ fprintf("the polynomial is y = ")
 for i = 1:degree
     fprintf("%fx^%f + ", X(i), i-1)
 end 
-fprintf("%fx^%f ", X(degree+1), degree)
+fprintf("%fx^%f ", X(degree+1), degree) 
+disp('Coefficients of the fitted polynomial:');
+disp(X');
+figure;
+plot(x_data, y_data, 'o', 'DisplayName', 'Data points');
+hold on;
+
+% Generating and plotting the polynomial
+x_values = linspace(min(x_data), max(x_data), 100);
+y_values = polyval(flip(X), x_values);
+
+plot(x_values, y_values, 'r-', 'DisplayName', 'Polynomial Fit');
+legend();
+xlabel('x');
+ylabel('y');
+title('Polynomial Fit to Data');
+legend(Location = 'best')
+grid on;
+hold off;
+
