@@ -1,0 +1,18 @@
+x_data = [1, 1.5, 2, 2.5, 3, 3.5, 4];
+y_data = [25, 31, 27, 28, 36, 35, 32];
+n = size(x_data, 2)
+x2_sum = 0;
+xy_sum = 0;
+for i = 1:n
+
+    x2_sum = x_data(1, i)^2 + x2_sum;
+    xy_sum = x_data(1, i)*y_data(1, i) + xy_sum;
+
+end
+A = [n, sum(x_data); sum(x_data), x2_sum]
+B = [sum(y_data); xy_sum]
+
+X = A\B
+
+format long
+fprintf("the line is y = %fx + %f", X(2, 1), X(1, 1))
