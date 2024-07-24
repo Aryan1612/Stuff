@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+vector<int>arr;
+
+
+
+
+void solve(){
+    //dutch flag
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+          int a;
+          cin>>a;
+          arr.push_back(a);
+    }
+    int hi=n-1;
+    int lo=0;
+    int mid=0;
+    while(mid<=hi){
+        if(arr[mid]==0){
+            swap(arr[lo],arr[mid]);
+            lo++;
+            mid++;
+        }
+        else if(arr[mid]==1){
+            mid++;
+        }
+        else if(arr[mid]==2){
+            swap(arr[hi],arr[mid]);
+            hi--;
+        }
+
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+
+}
